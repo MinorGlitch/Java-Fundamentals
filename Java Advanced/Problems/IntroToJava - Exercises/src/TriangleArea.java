@@ -15,12 +15,12 @@ public class TriangleArea {
             scanner.nextLine();
         }
 
-        int result = CalculateArea(triangleCoordinates);
+        int result = calculateArea(triangleCoordinates);
 
         System.out.println(result);
     }
 
-    private static int CalculateArea(Point[] triangleCoordinates) {
+    private static int calculateArea(Point[] triangleCoordinates) {
         Point A = triangleCoordinates[0];
         Point B = triangleCoordinates[1];
         Point C = triangleCoordinates[2];
