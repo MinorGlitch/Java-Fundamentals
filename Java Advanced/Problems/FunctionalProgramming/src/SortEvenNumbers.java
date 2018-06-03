@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public class SortEvenNumbers {
@@ -14,6 +15,13 @@ public class SortEvenNumbers {
 
         numbers.removeIf(n -> n % 2 != 0);
 
-        
+        Consumer<List<Integer>> printNumbers = nums ->
+                System.out.println(nums.toString().replaceAll("[\\[\\]]", ""));
+
+        printNumbers.accept(numbers);
+
+        numbers.sort(Integer::compareTo);
+
+        printNumbers.accept(numbers);
     }
 }

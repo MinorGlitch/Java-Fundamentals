@@ -12,18 +12,16 @@ public class SentenceExtractor {
 
         String keyword = reader.readLine();
 
-        String[] textSentences = reader.readLine().split(" ");
+        String textSentences = reader.readLine();
 
-        Pattern pattern = Pattern.compile("(?<=^| )" + keyword);
+        Pattern pattern = Pattern.compile("([A-Z][\\w\\W]*?\\b" + keyword + "\\b[\\w\\W]*?[.!?])");
 
         List<String> validSentences = new ArrayList<>();
 
-        for (String sentence : textSentences) {
-            Matcher matcher = pattern.matcher(sentence);
+        Matcher matcher = pattern.matcher(textSentences);
 
-            if (matcher.find()) {
-                validSentences.add(sentence);
-            }
+        while (matcher.find()) {
+            validSentences.add(matcher.group().trim());
         }
 
         validSentences.forEach(System.out::println);
