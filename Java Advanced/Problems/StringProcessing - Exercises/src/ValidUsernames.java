@@ -10,16 +10,18 @@ public class ValidUsernames {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        String names = reader.readLine();
+        String[] names = reader.readLine().split("\\W+");
 
         List<String> matches = new ArrayList<>();
 
-        Pattern pattern = Pattern.compile("\\b[a-z][a-zA-Z0-9_]{2,24}\\b");
+        Pattern pattern = Pattern.compile("\\b[a-zA-Z][A-Za-z0-9_]{2,24}$\\b");
 
-        Matcher matcher = pattern.matcher(names);
+        for (String name : names) {
+            Matcher matcher = pattern.matcher(name);
 
-        while (matcher.find()) {
-            matches.add(matcher.group());
+            if (matcher.find()) {
+                matches.add(matcher.group());
+            }
         }
 
         String[] pairs = new String[2];

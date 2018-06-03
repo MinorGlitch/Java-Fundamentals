@@ -14,16 +14,20 @@ public class SentenceExtractor {
 
         String textSentences = reader.readLine();
 
-        Pattern pattern = Pattern.compile("([A-Z][\\w\\W]*?\\b" + keyword + "\\b[\\w\\W]*?[.!?])");
+        Pattern pattern = Pattern.compile(".*?[.!?]");
 
         List<String> validSentences = new ArrayList<>();
 
         Matcher matcher = pattern.matcher(textSentences);
 
         while (matcher.find()) {
-            validSentences.add(matcher.group().trim());
+            validSentences.add(matcher.group());
         }
 
-        validSentences.forEach(System.out::println);
+        validSentences.forEach(s -> {
+            if (s.contains(" " + keyword + " ")) {
+                System.out.println(s.trim());
+            }
+        });
     }
 }

@@ -11,31 +11,31 @@ public class AppliedArithmetics {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        List<Integer> numbers = Arrays.stream(reader.readLine()
-                .split(" ")).map(Integer::parseInt).collect(Collectors.toList());
+        List<Long> numbers = Arrays.stream(reader.readLine()
+                .split(" ")).map(Long::parseLong).collect(Collectors.toList());
 
-        BiConsumer<List<Integer>, String> alterList = (nums, operation) -> {
+        BiConsumer<List<Long>, String> alterList = (nums, operation) -> {
             switch (operation) {
                 case "add":
                     for (int i = 0; i < nums.size(); i++) {
-                        int num = nums.get(i);
+                        long num = nums.get(i);
                         nums.set(i, num + 1);
                     }
                     break;
                 case "multiply":
                     for (int i = 0; i < nums.size(); i++) {
-                        int num = nums.get(i);
+                        long num = nums.get(i);
                         nums.set(i, num * 2);
                     }
                     break;
                 case "subtract":
                     for (int i = 0; i < nums.size(); i++) {
-                        int num = nums.get(i);
+                        long num = nums.get(i);
                         nums.set(i, num - 1);
                     }
                     break;
                 default:
-                    nums.forEach(n -> System.out.println(n));
+                    nums.forEach(n -> System.out.print(n + " "));
                     break;
             }
         };
