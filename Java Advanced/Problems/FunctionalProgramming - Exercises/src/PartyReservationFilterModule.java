@@ -30,92 +30,42 @@ public class PartyReservationFilterModule {
                     String key = params[2];
 
                     if (filterType.equals("Remove filter")) {
-                        while (filteredIterator.hasNext()) {
-                            String name = filteredIterator.next();
-                            if (startsWith.test(name, key)) {
-                                allNames.add(name);
-                                filteredIterator.remove();
-                            }
-                        }
+                        removeFilter(allNames, startsWith, filteredIterator, key);
+
                         break;
                     }
-
-                    while (namesIterator.hasNext()) {
-                        String name = namesIterator.next();
-                        if (startsWith.test(name, key)) {
-                            filteredNames.add(name);
-                            namesIterator.remove();
-                        }
-                    }
+                    addFilter(filteredNames, startsWith, namesIterator, key);
                     break;
                 }
                 case "Ends with": {
                     String key = params[2];
 
                     if (filterType.equals("Remove filter")) {
-                        while (filteredIterator.hasNext()) {
-                            String name = filteredIterator.next();
-                            if (endsWith.test(name, key)) {
-                                allNames.add(name);
-                                filteredIterator.remove();
-                            }
-                        }
+                        removeFilter(allNames, endsWith, filteredIterator, key);
                         break;
                     }
-
-                    while (namesIterator.hasNext()) {
-                        String name = namesIterator.next();
-                        if (endsWith.test(name, key)) {
-                            filteredNames.add(name);
-                            namesIterator.remove();
-                        }
-                    }
+                    addFilter(filteredNames, endsWith, namesIterator, key);
                     break;
                 }
                 case "Contains": {
                     String key = params[2];
 
                     if (filterType.equals("Remove filter")) {
-                        while (filteredIterator.hasNext()) {
-                            String name = filteredIterator.next();
-                            if (containsKey.test(name, key)) {
-                                allNames.add(name);
-                                filteredIterator.remove();
-                            }
-                        }
+                        removeFilter(allNames, containsKey, filteredIterator, key);
                         break;
                     }
 
-                    while (namesIterator.hasNext()) {
-                        String name = namesIterator.next();
-                        if (containsKey.test(name, key)) {
-                            filteredNames.add(name);
-                            namesIterator.remove();
-                        }
-                    }
+                    addFilter(filteredNames, containsKey, namesIterator, key);
                     break;
                 }
                 default:
                     int length = Integer.valueOf(params[2]);
 
                     if (filterType.equals("Remove filter")) {
-                        while (filteredIterator.hasNext()) {
-                            String name = filteredIterator.next();
-                            if (isSameLength.test(name, length)) {
-                                allNames.add(name);
-                                filteredIterator.remove();
-                            }
-                        }
+                        removeFilter(allNames, isSameLength, filteredIterator, length);
                         break;
                     }
-
-                    while (namesIterator.hasNext()) {
-                        String name = namesIterator.next();
-                        if (isSameLength.test(name, length)) {
-                            filteredNames.add(name);
-                            namesIterator.remove();
-                        }
-                    }
+                    addFilter(filteredNames, isSameLength, namesIterator, length);
                     break;
             }
         };
@@ -128,6 +78,57 @@ public class PartyReservationFilterModule {
         }
 
         allNames.forEach(name -> System.out.print(name + " "));
+    }
 
+    private static void addFilter(List<String> filtered
+            , BiPredicate<String, String> predicate, Iterator<String> namesIterator, String key) {
+
+        while (namesIterator.hasNext()) {
+            String name = namesIterator.next();
+            boolean val = predicate.test(name, key);
+            if (val) {
+                filtered.add(name);
+                namesIterator.remove();
+            }
+        }
+    }
+
+    private static void addFilter(List<String> filtered
+            , BiPredicate<String, Integer> predicate, Iterator<String> namesIterator, int key) {
+
+        while (namesIterator.hasNext()) {
+            String name = namesIterator.next();
+            boolean val = predicate.test(name, key);
+            if (val) {
+                filtered.add(name);
+                namesIterator.remove();
+            }
+        }
+    }
+
+    private static void removeFilter(List<String> allNames
+            , BiPredicate<String, Integer> predicate, Iterator<String> filteredIterator, int key) {
+
+        while (filteredIterator.hasNext()) {
+            String name = filteredIterator.next();
+            boolean val = predicate.test(name, key);
+            if (val) {
+                allNames.add(name);
+                filteredIterator.remove();
+            }
+        }
+    }
+
+    private static void removeFilter(List<String> allNames
+            , BiPredicate<String, String> predicate, Iterator<String> filteredIterator, String key) {
+
+        while (filteredIterator.hasNext()) {
+            String name = filteredIterator.next();
+            boolean val = predicate.test(name, key);
+            if (val) {
+                allNames.add(name);
+                filteredIterator.remove();
+            }
+        }
     }
 }
