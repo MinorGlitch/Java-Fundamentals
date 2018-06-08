@@ -36,6 +36,7 @@ public class AppliedArithmetics {
                     break;
                 default:
                     nums.forEach(n -> System.out.print(n + " "));
+                    System.out.println();
                     break;
             }
         };
