@@ -2,7 +2,7 @@ package speedRacing;
 
 public class Car {
     private String model;
-    private int fuelAmount;
+    private double fuelAmount;
     private double fuelCostPerKilometer;
     private int distanceTravelled;
 
@@ -10,34 +10,32 @@ public class Car {
         this.model = model;
         this.fuelAmount = fuelAmount;
         this.fuelCostPerKilometer = fuelCostPerKilometer;
+        this.distanceTravelled = 0;
     }
 
-    public boolean canDrive(int kilometers) {
-        return kilometers < fuelAmount
+    public boolean canDrive(double kilometers) {
+        return this.getFuelAmount() >= kilometers * this.getFuelCostPerKilometer();
     }
 
-    public String getModel() {
-        return model;
+    public void drive(double kilometers) {
+        this.fuelAmount -= kilometers * this.getFuelCostPerKilometer();
+        this.distanceTravelled += kilometers;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public int getFuelAmount() {
+    public double getFuelAmount() {
         return fuelAmount;
     }
 
-    public void setFuelAmount(int fuelAmount) {
-        this.fuelAmount = fuelAmount;
-    }
 
     public double getFuelCostPerKilometer() {
         return fuelCostPerKilometer;
     }
 
-    public void setFuelCostPerKilometer(double fuelCostPerKilometer) {
-        this.fuelCostPerKilometer = fuelCostPerKilometer;
+    public int getDistanceTravelled() {
+        return distanceTravelled;
     }
 
+    public String getModel() {
+        return model;
+    }
 }

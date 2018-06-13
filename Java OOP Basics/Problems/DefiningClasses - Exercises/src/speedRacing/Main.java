@@ -26,7 +26,25 @@ public class Main {
         String line = reader.readLine();
 
         while (!"End".equals(line)) {
+            String[] carArgs = line.split(" ");
+            String model = carArgs[1];
+            double kilometers = Double.valueOf(carArgs[2]);
 
+            if (cars.containsKey(model)) {
+                Car currentCar = cars.get(model);
+
+                if (currentCar.canDrive(kilometers)) {
+                    currentCar.drive(kilometers);
+                } else {
+                    System.out.println("Insufficient fuel for the drive");
+                }
+            }
+
+            line = reader.readLine();
         }
+
+        cars.values().forEach(c -> {
+            System.out.printf("%s %.2f %d%n", c.getModel(), c.getFuelAmount(), c.getDistanceTravelled());
+        });
     }
 }
