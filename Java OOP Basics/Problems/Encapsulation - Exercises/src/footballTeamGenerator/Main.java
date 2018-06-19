@@ -36,13 +36,13 @@ public class Main {
                     stats = getPlayerStats(playerArgs);
                     Player player;
                     try {
-                       player  = new Player(playerName, stats.pop(), stats.pop(),
+                        player = new Player(playerName, stats.pop(), stats.pop(),
                                 stats.pop(), stats.pop(), stats.pop());
-                    }catch (IllegalArgumentException ex) {
+                        addPlayerToTeam(player, teamName);
+                    } catch (IllegalArgumentException ex) {
                         System.out.println(ex.getMessage());
                         break;
                     }
-                    addPlayerToTeam(player, teamName);
                     break;
                 case "Remove":
                     teamName = playerArgs[1];
@@ -83,6 +83,7 @@ public class Main {
         if (!isTeamPresent(teamName)) {
             throw new IllegalArgumentException(String.format("Team %s does not exist", teamName));
         }
+
         teams.get(teamName).removePlayer(playerName);
     }
 

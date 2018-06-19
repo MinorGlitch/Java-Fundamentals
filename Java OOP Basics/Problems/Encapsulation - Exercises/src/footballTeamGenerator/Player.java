@@ -36,12 +36,12 @@ public class Player {
         return name;
     }
 
-    public double getPlayerRating() {
-        return Math.round((sprint + dribble + passing + shooting + endurance) / 5.0);
+    public int getPlayerRating() {
+        return (int)Math.round((sprint + dribble + passing + shooting + endurance) / 5.0);
     }
 
     private void setName(String name) {
-        if (!isValidName(name)) {
+        if (!isValidName(name.trim())) {
             throw new IllegalArgumentException(INVALID_NAME_MESSAGE);
         }
         this.name = name;
@@ -76,10 +76,10 @@ public class Player {
     }
 
     private boolean isValidStat(int stat) {
-        return (stat > STAT_MIN_VALUE && stat <= STAT_MAX_VALUE);
+        return (stat >= STAT_MIN_VALUE && stat <= STAT_MAX_VALUE);
     }
 
     private boolean isValidName(String name) {
-        return !name.isEmpty();
+        return !name.isEmpty() || name == null;
     }
 }
