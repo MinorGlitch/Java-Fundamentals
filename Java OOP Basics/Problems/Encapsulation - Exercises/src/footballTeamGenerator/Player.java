@@ -1,7 +1,5 @@
 package footballTeamGenerator;
 
-import javafx.css.Match;
-
 public class Player {
     private String name;
     private int endurance;
@@ -41,7 +39,7 @@ public class Player {
     }
 
     private void setName(String name) {
-        if (!isValidName(name.trim())) {
+        if (!isValidName(name)) {
             throw new IllegalArgumentException(INVALID_NAME_MESSAGE);
         }
         this.name = name;
@@ -80,6 +78,6 @@ public class Player {
     }
 
     private boolean isValidName(String name) {
-        return !name.isEmpty() || name == null;
+        return name != null || !name.isEmpty();
     }
 }

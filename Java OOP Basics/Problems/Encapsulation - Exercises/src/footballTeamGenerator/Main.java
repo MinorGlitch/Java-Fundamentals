@@ -12,6 +12,8 @@ public class Main {
 
     private static Map<String, Team> teams = new LinkedHashMap<>();
 
+
+    //TODO: NEEDS REFACTORING!!!
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -21,46 +23,40 @@ public class Main {
             String[] playerArgs = line.split(";");
 
             String command = playerArgs[0];
-            String teamName;
+            String teamName = playerArgs[1];
             String playerName;
             Deque<Integer> stats;
 
             switch (command) {
                 case "Team":
-                    teamName = playerArgs[1];
-                    createTeam(teamName, teams);
-                    break;
-                case "Add":
-                    teamName = playerArgs[1];
-                    playerName = playerArgs[2];
-                    stats = getPlayerStats(playerArgs);
-                    Player player;
                     try {
-                        player = new Player(playerName, stats.pop(), stats.pop(),
-                                stats.pop(), stats.pop(), stats.pop());
-                        addPlayerToTeam(player, teamName);
+                        createTeam(teamName, teams);
                     } catch (IllegalArgumentException ex) {
                         System.out.println(ex.getMessage());
-                        break;
+                    }
+                    break;
+                case "Add":
+                    playerName = playerArgs[2];
+                    stats = getPlayerStats(playerArgs);
+                    try {
+                        addPlayerToTeam(teamName, playerName, stats);
+                    } catch (IllegalArgumentException ex) {
+                        System.out.println(ex.getMessage());
                     }
                     break;
                 case "Remove":
-                    teamName = playerArgs[1];
                     playerName = playerArgs[2];
                     try {
                         removePlayer(teamName, playerName);
                     } catch (IllegalArgumentException ex) {
                         System.out.println(ex.getMessage());
-                        break;
                     }
                     break;
                 case "Rating":
-                    teamName = playerArgs[1];
                     try {
                         printTeamRating(teamName);
                     } catch (IllegalArgumentException ex) {
                         System.out.println(ex.getMessage());
-                        break;
                     }
                     break;
             }
@@ -71,7 +67,7 @@ public class Main {
 
     private static void printTeamRating(String teamName) {
         if (!isTeamPresent(teamName)) {
-            throw new IllegalArgumentException(String.format("Team %s does not exist", teamName));
+            throw new IllegalArgumentException(String.format("Team %s does not exist.", teamName));
         }
 
         Team team = teams.get(teamName);
@@ -81,29 +77,27 @@ public class Main {
 
     private static void removePlayer(String teamName, String playerName) {
         if (!isTeamPresent(teamName)) {
-            throw new IllegalArgumentException(String.format("Team %s does not exist", teamName));
+            throw new IllegalArgumentException(String.format("Team %s does not exist.", teamName));
         }
 
         teams.get(teamName).removePlayer(playerName);
     }
 
-    private static void addPlayerToTeam(Player player, String teamName) {
-        Team team;
-
+    private static void addPlayerToTeam(String teamName, String playerName, Deque<Integer> stats) {
         if (isTeamPresent(teamName)) {
-            team = teams.get(teamName);
-            team.addPlayer(player);
+            teams.get(teamName).addPlayer(new Player(playerName, stats.pop(), stats.pop(),
+                    stats.pop(), stats.pop(), stats.pop()));
         } else {
-            throw new IllegalArgumentException(String.format("Team %s does not exist", teamName));
+            throw new IllegalArgumentException(String.format("Team %s does not exist.", teamName));
         }
     }
 
     private static boolean isTeamPresent(String teamName) {
-        return teams.get(teamName) != null;
+        return teams.containsKey(teamName);
     }
 
     private static void createTeam(String teamName, Map<String, Team> teams) {
-        teams.put(teamName, new Team(teamName));
+        teams.putIfAbsent(teamName, new Team(teamName));
     }
 
     private static Deque<Integer> getPlayerStats(String[] playerArgs) {

@@ -19,11 +19,11 @@ public class Team {
     }
 
     public int getRating() {
+        int average = 0;
+
         if (players.size() == 0) {
             return 0;
         }
-
-        int average = 0;
 
         for (Player player : players) {
             average += player.getPlayerRating();
@@ -44,10 +44,6 @@ public class Team {
         return findPlayer(playerName).isPresent();
     }
 
-    public Optional<Player> getPlayer(String playerName) {
-        return this.players.stream().filter(p -> p.getName().equals(playerName)).findFirst();
-    }
-
     private Optional<Player> findPlayer(String playerName) {
        return this.players.stream().filter(p -> p.getName().equals(playerName)).findFirst();
     }
@@ -60,6 +56,6 @@ public class Team {
     }
 
     private boolean isValidName(String name) {
-        return !name.isEmpty();
+        return  name != null || !name.isEmpty();
     }
 }
