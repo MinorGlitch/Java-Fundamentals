@@ -47,7 +47,7 @@ public class Main {
             case "Tomcat":
                 return new Tomcat(animalArgs[0], Integer.valueOf(animalArgs[1]));
             default:
-                return new Animal(animalArgs[0], Integer.valueOf(animalArgs[1]), animalArgs[2], type);
+                throw new IllegalArgumentException(Animal.INVALID_INPUT_MESSAGE);
         }
     }
 }

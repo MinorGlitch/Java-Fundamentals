@@ -14,11 +14,6 @@ public class Animal {
         this.setGender(gender);
     }
 
-    public Animal(String name, int age, String gender, String type) {
-        this(name, age, gender);
-        this.type = type;
-    }
-
     private void setGender(String gender) {
         this.gender = new Gender(gender);
     }
