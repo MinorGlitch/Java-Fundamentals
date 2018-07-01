@@ -19,7 +19,9 @@ public class Main {
 
             Individual individual = createIndividual(individualArgs);
 
-            individuals.add(individual);
+            if (individual != null) {
+                individuals.add(individual);
+            }
 
             line = reader.readLine();
         }
@@ -35,16 +37,17 @@ public class Main {
     private static Individual createIndividual(String[] individualArgs) {
         String type = individualArgs[0];
 
+
         switch (type) {
             case "Citizen":
                 return new Citizen(individualArgs[1], Integer.valueOf(individualArgs[2]),
                         individualArgs[3], individualArgs[4]);
-            case "Robot":
-                return new Robot(individualArgs[1], individualArgs[2]);
             case "Pet":
                 return new Pet(individualArgs[1], individualArgs[2]);
             default:
                 return null;
         }
     }
+
+
 }
