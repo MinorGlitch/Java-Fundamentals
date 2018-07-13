@@ -1,4 +1,4 @@
-package genericSwapMethodStrings;
+package genericSwapMethodInteger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,10 +13,10 @@ public class Main {
 
         int n = Integer.valueOf(reader.readLine());
 
-        List<Box<String>> boxes = new ArrayList<>();
+        List<Box<Integer>> boxes = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            boxes.add(new Box<>(reader.readLine()));
+            boxes.add(new Box<>(Integer.valueOf(reader.readLine())));
         }
 
         int[] swapIndexes = Arrays.stream(reader.readLine().split(" "))

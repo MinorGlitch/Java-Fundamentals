@@ -1,4 +1,4 @@
-package genericSwapMethodStrings;
+package genericCountMethodStrings;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,18 +19,12 @@ public class Main {
             boxes.add(new Box<>(reader.readLine()));
         }
 
-        int[] swapIndexes = Arrays.stream(reader.readLine().split(" "))
-                .mapToInt(Integer::parseInt).toArray();
+        String item = reader.readLine();
 
-
-        swap(boxes, swapIndexes);
-
-        boxes.forEach(b -> System.out.println(b.toString()));
+        System.out.println(count(boxes, item));
     }
 
-    private static <T> void swap(List<Box<T>> boxes, int[] indexes) {
-        Box<T> box = boxes.get(indexes[0]);
-        boxes.set(indexes[0], boxes.get(indexes[1]));
-        boxes.set(indexes[1], box);
+    private static <T extends Comparable<T>> long count(List<Box<T>> items, T itemToCompare) {
+        return items.stream().filter(i -> i.item.compareTo(itemToCompare) > 0).count();
     }
 }
