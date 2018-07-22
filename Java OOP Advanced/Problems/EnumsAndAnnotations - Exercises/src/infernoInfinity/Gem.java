@@ -24,6 +24,4 @@ public enum Gem{
     public int getVitality() {
         return vitality;
     }
-
-
 }
