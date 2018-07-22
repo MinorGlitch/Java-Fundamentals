@@ -1,16 +1,16 @@
 package infernoInfinity;
 
 public class WeaponFactory {
-    public static Weapon createWeapon(String type) {
-        Weapon weapon = Enum.valueOf(Weapon.class, type.toUpperCase());
+    public static Weapon createWeapon(String type, String name) {
+        WeaponType weaponType = Enum.valueOf(WeaponType.class, type.toUpperCase());
 
-        switch (weapon) {
+        switch (weaponType) {
             case AXE:
-                return Weapon.AXE;
+                return new Weapon(name, WeaponType.AXE);
             case KNIFE:
-                return Weapon.KNIFE;
+                return new Weapon(name, WeaponType.KNIFE);
             case SWORD:
-                return Weapon.SWORD;
+                return new Weapon(name, WeaponType.SWORD);
             default:
                 return null;
         }

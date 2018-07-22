@@ -1,78 +1,70 @@
 package infernoInfinity;
 
-public enum Weapon {
-    AXE(5, 10, new Gem[4]), SWORD(4, 6, new Gem[3]), KNIFE(3, 4, new Gem[2]);
+public class Weapon {
+    private String name;
+    private WeaponType weaponType;
 
-    private int minDamage;
-    private int maxDamage;
-    private Gem[] gems;
-
-    Weapon(int min, int max, Gem[] gems) {
-        this.minDamage = min;
-        this.maxDamage = max;
-        this.gems = gems;
+    public Weapon(String name, WeaponType weaponType) {
+        this.name = name;
+        this.weaponType = weaponType;
     }
 
     public void addGem(Gem gem, int index) {
         try {
-            if (gems[index] != null) {
-                weakenWeapon(index);
-                gems[index] = gem;
+            if (this.weaponType.getGems()[index] != null) {
+                this.weaponType.getGems()[index] = gem;
                 return;
             }
-
             empowerWeapon(gem);
-            gems[index] = gem;
+            this.weaponType.getGems()[index] = gem;
 
-        } catch (ArrayIndexOutOfBoundsException ignored) {
+        } catch (Exception ignored) {
 
         }
     }
 
     private void empowerWeapon(Gem gem) {
-        this.minDamage += (gem.getStrength() * 2);
-        this.minDamage +=  (gem.getAgility());
-        this.maxDamage += (gem.getStrength() * 3);
-        this.maxDamage += (gem.getAgility() * 4);
+        this.weaponType.setMinDamage(this.weaponType.getMinDamage() + gem.getStrength() * 2);
+        this.weaponType.setMinDamage(this.weaponType.getMinDamage() + gem.getAgility());
+        this.weaponType.setMaxDamage(this.weaponType.getMaxDamage() + gem.getStrength() * 3);
+        this.weaponType.setMaxDamage(this.weaponType.getMaxDamage() + gem.getAgility() * 4);
     }
 
     public void removeGem(int index) {
         try {
-            if (gems[index] == null) {
-                return;
-            }
             weakenWeapon(index);
-
-            gems[index] = null;
-        } catch (ArrayIndexOutOfBoundsException ignored) {
+            this.weaponType.getGems()[index] = null;
+        } catch (Exception ignored) {
 
         }
     }
 
     private void weakenWeapon(int index) {
-        Gem gem = this.gems[index];
+        Gem gem = this.weaponType.getGems()[index];
 
-        this.minDamage -= (gem.getStrength() * 2);
-        this.minDamage -= (gem.getAgility());
-        this.maxDamage -= (gem.getStrength() * 3);
-        this.maxDamage -= (gem.getAgility() * 4);
+        this.weaponType.setMinDamage(this.weaponType.getMinDamage() - gem.getStrength() * 2);
+        this.weaponType.setMinDamage(this.weaponType.getMinDamage() - gem.getAgility());
+        this.weaponType.setMaxDamage(this.weaponType.getMaxDamage() - gem.getStrength() * 3);
+        this.weaponType.setMaxDamage(this.weaponType.getMaxDamage() - gem.getAgility() * 4);
     }
 
     @Override
     public String toString() {
-        return String.format("%d-%d Damage, " +
-                "+%d Strength, +%d Agility, +%d Vitality",
-                this.minDamage, this.maxDamage, this.getStrength(), this.getAgility(), this.getVitality());
+        return String.format("%s: %d-%d Damage, " +
+                        "+%d Strength, +%d Agility, +%d Vitality", this.name,
+                this.weaponType.getMinDamage(), this.weaponType.getMaxDamage(),
+                this.getStrength(), this.getAgility(), this.getVitality());
     }
 
     private int getStrength() {
         int res = 0;
 
         try {
-            for (Gem gem : gems) {
+            for (Gem gem : this.weaponType.getGems()) {
                 res += gem.getStrength();
             }
-        } catch (Exception ignored) {}
+        } catch (Exception ignored) {
+        }
 
         return res;
     }
@@ -81,7 +73,7 @@ public enum Weapon {
         int res = 0;
 
         try {
-            for (Gem gem : gems) {
+            for (Gem gem : this.weaponType.getGems()) {
                 res += gem.getAgility();
             }
         } catch (Exception ignored) {
@@ -95,7 +87,7 @@ public enum Weapon {
         int res = 0;
 
         try {
-            for (Gem gem : gems) {
+            for (Gem gem : this.weaponType.getGems()) {
                 res += gem.getVitality();
             }
         } catch (Exception ignored) {

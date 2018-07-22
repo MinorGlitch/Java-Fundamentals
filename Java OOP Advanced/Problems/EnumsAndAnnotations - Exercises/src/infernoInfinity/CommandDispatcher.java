@@ -23,13 +23,13 @@ public class CommandDispatcher {
     }
 
     private static void printWeapon(String name, WeaponRepository repository) {
-        Weapon weapon = repository.getWeapons().get(name);
+        Weapon weaponType = repository.getWeapons().get(name);
 
-        if (weapon == null) {
+        if (weaponType == null) {
             return;
         }
 
-        System.out.println(name + ": " + weapon);
+        System.out.println(weaponType);
     }
 
     private static void addGem(String weaponName, int socket, String gemType, WeaponRepository repository) {
@@ -37,6 +37,6 @@ public class CommandDispatcher {
     }
 
     private static void createWeapon(String arg, String arg1, WeaponRepository repository) {
-        repository.getWeapons().put(arg1, WeaponFactory.createWeapon(arg));
+        repository.getWeapons().put(arg1, WeaponFactory.createWeapon(arg, arg1));
     }
 }

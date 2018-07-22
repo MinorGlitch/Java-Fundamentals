@@ -1,6 +1,6 @@
 package infernoInfinity;
 
-public enum Gem {
+public enum Gem{
     RUBY(7, 2, 5), EMERALD(1, 4, 9), AMETHYST(2, 8, 4);
 
     private int strength;
@@ -24,4 +24,6 @@ public enum Gem {
     public int getVitality() {
         return vitality;
     }
+
+
 }
