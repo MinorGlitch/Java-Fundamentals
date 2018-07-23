@@ -1,13 +1,13 @@
 package infernoInfinity;
 
 public enum WeaponType {
-    AXE(5, 10, new Gem[4]), SWORD(4, 6, new Gem[3]), KNIFE(3, 4, new Gem[2]);
+    AXE(5, 10, 4), SWORD(4, 6, 3), KNIFE(3, 4, 2);
 
     private int minDamage;
     private int maxDamage;
-    private Gem[] gems;
+    private int gems;
 
-    WeaponType(int min, int max, Gem[] gems) {
+    WeaponType(int min, int max, int gems) {
         this.minDamage = min;
         this.maxDamage = max;
         this.gems = gems;
@@ -21,7 +21,7 @@ public enum WeaponType {
         return maxDamage;
     }
 
-    public Gem[] getGems() {
+    public int getGems() {
         return gems;
     }
 

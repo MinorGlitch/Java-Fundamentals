@@ -54,7 +54,7 @@ public class CommandDispatcher {
     }
 
     private static void removeGem(String name, Integer index, WeaponRepository repository) {
-        repository.getWeapons().get(name).removeNoWeaken(index);
+        repository.getWeapons().get(name).removeGem(index);
     }
 
     private static void printWeapon(String name, WeaponRepository repository) {
