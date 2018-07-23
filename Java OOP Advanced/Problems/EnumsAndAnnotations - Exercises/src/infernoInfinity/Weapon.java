@@ -1,5 +1,12 @@
 package infernoInfinity;
 
+import infernoInfinity.annotations.CustomAnnotation;
+import infernoInfinity.enums.Gem;
+import infernoInfinity.enums.WeaponType;
+
+import java.util.Arrays;
+import java.util.Objects;
+
 @CustomAnnotation(description = "Used for Java OOP Advanced course - Enumerations and Annotations.",
         author = "Pesho", revision = 3, reviewers = {"Pesho", "Svetlio"})
 public class Weapon implements Comparable<Weapon> {
@@ -58,50 +65,15 @@ public class Weapon implements Comparable<Weapon> {
     }
 
     private int getStrength() {
-        int res = 0;
-
-        try {
-            for (Gem gem : this.gems) {
-                if (gem != null) {
-                    res += gem.getStrength();
-                }
-            }
-        } catch (Exception ignored) {
-        }
-
-        return res;
+        return Arrays.stream(this.gems).filter(Objects::nonNull).mapToInt(Gem::getStrength).sum();
     }
 
     private int getAgility() {
-        int res = 0;
-
-        try {
-            for (Gem gem : this.gems) {
-                if (gem != null) {
-                    res += gem.getAgility();
-                }
-            }
-        } catch (Exception ignored) {
-
-        }
-
-        return res;
+        return Arrays.stream(this.gems).filter(Objects::nonNull).mapToInt(Gem::getAgility).sum();
     }
 
     private int getVitality() {
-        int res = 0;
-
-        try {
-            for (Gem gem : this.gems) {
-                if (gem != null) {
-                    res += gem.getVitality();
-                }
-            }
-        } catch (Exception ignored) {
-
-        }
-
-        return res;
+        return Arrays.stream(this.gems).filter(Objects::nonNull).mapToInt(Gem::getVitality).sum();
     }
 
     public double calculateLevel() {

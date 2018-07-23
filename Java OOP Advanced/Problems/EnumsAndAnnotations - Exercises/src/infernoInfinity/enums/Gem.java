@@ -1,4 +1,4 @@
-package infernoInfinity;
+package infernoInfinity.enums;
 
 public enum Gem{
     RUBY(7, 2, 5), EMERALD(1, 4, 9), AMETHYST(2, 8, 4);

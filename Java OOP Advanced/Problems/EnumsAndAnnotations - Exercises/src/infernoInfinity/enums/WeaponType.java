@@ -1,4 +1,4 @@
-package infernoInfinity;
+package infernoInfinity.enums;
 
 public enum WeaponType {
     AXE(5, 10, 4), SWORD(4, 6, 3), KNIFE(3, 4, 2);

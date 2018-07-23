@@ -1,4 +1,6 @@
-package infernoInfinity;
+package infernoInfinity.repositories;
+
+import infernoInfinity.Weapon;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

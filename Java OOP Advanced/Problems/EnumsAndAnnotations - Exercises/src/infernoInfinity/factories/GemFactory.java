@@ -1,4 +1,6 @@
-package infernoInfinity;
+package infernoInfinity.factories;
+
+import infernoInfinity.enums.Gem;
 
 public class GemFactory {
     public static Gem createGem(String type) {

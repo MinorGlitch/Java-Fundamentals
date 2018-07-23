@@ -1,4 +1,10 @@
-package infernoInfinity;
+package infernoInfinity.dispatchers;
+
+import infernoInfinity.annotations.CustomAnnotation;
+import infernoInfinity.factories.GemFactory;
+import infernoInfinity.Weapon;
+import infernoInfinity.repositories.WeaponRepository;
+import infernoInfinity.factories.WeaponFactory;
 
 public class CommandDispatcher {
     public static void dispatchCommand(String[] args, WeaponRepository repository) {

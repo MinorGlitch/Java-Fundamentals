@@ -1,4 +1,7 @@
-package infernoInfinity;
+package infernoInfinity.factories;
+
+import infernoInfinity.Weapon;
+import infernoInfinity.enums.WeaponType;
 
 public class WeaponFactory {
     public static Weapon createWeapon(String type, String name) {
