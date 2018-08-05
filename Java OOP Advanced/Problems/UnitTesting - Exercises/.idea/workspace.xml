@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ab82e4a-fba1-4097-9718-cb3ae1395252" name="Default Changelist" comment="" />
+    <list default="true" id="9ab82e4a-fba1-4097-9718-cb3ae1395252" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,109 +22,47 @@
     <session id="-1534551261">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="5" />
-          <entry key="java" value="19" />
+          <entry key="java" value="24" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="19" />
+          <entry key="JAVA" value="24" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4734" />
+          <entry key="java" value="6044" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4734" />
+          <entry key="JAVA" value="6044" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/twitter/Twitter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/twitter/Tweet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/twitter/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding>
-                <element signature="e#126#127#0" expanded="true" />
-                <element signature="e#164#165#0" expanded="true" />
-                <element signature="e#108#109#0" expanded="true" />
-                <element signature="e#135#136#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/twitter/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/twitter/MicrowaveOven.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding>
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TwitterTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bubbleSort/Bubble.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
+            <state relative-caret-position="315">
               <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
             </state>
           </provider>
@@ -130,18 +71,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/BubbleTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="504">
+              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#151#152#0" expanded="true" />
-                <element signature="e#192#193#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/integration/Category.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
@@ -149,6 +88,75 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panzer/core/PanzerBattleOperator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panzer/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/databaseTests/DatabaseExtendedTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panzer/models/miscellaneous/VehicleAssembler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1029">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1995#1996#0" expanded="true" />
+                <element signature="e#2066#2067#0" expanded="true" />
+                <element signature="e#2128#2129#0" expanded="true" />
+                <element signature="e#2196#2197#0" expanded="true" />
+                <element signature="e#2266#2267#0" expanded="true" />
+                <element signature="e#2344#2345#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/panzer/models/miscellaneous/VehicleAssemblerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -169,6 +177,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -194,6 +203,9 @@
         <option value="$PROJECT_DIR$/src/main/java/bubbleSort/Bubble.java" />
         <option value="$PROJECT_DIR$/src/test/java/BubbleTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/integration/Category.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/panzer/models/miscellaneous/VehicleAssembler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/panzer/models/miscellaneous/VehicleAssemblerTest.java" />
       </list>
     </option>
   </component>
@@ -209,7 +221,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="140" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -223,7 +242,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,7 +276,34 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="panzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnitTesting - Exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnitTesting - Exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="panzer" type="462c0819:PsiDirectoryNode" />
+              <item name="contracts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnitTesting - Exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnitTesting - Exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="panzer" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UnitTesting - Exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnitTesting - Exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="panzer" type="462c0819:PsiDirectoryNode" />
+              <item name="miscellaneous" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UnitTesting - Exercises" type="b2602c69:ProjectViewProjectNode" />
@@ -278,24 +326,43 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="databaseTests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="UnitTesting - Exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UnitTesting - Exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="miscellaneous" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533059093352" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533494740938" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="Debugger_Data_Views_Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="panzer.models.miscellaneous" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java-Fundamentals\Java OOP Advanced\Problems\UnitTesting - Exercises\src\main\java" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -309,67 +376,101 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BubbleTests.bubbleSort">
-    <configuration name="BubbleTests.bubbleSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.VehicleAssemblerTest.getTotalPrice">
+    <configuration name="VehicleAssemblerTest.addArsenalPart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTesting - Exercises" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BubbleTests" />
-      <option name="METHOD_NAME" value="bubbleSort" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="panzer.models.miscellaneous.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="panzer.models.miscellaneous" />
+      <option name="MAIN_CLASS_NAME" value="panzer.models.miscellaneous.VehicleAssemblerTest" />
+      <option name="METHOD_NAME" value="addArsenalPart" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IteratorTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehicleAssemblerTest.addShellPart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTesting - Exercises" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IteratorTests" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IteratorTests.moveOutsideOfBoundaries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UnitTesting - Exercises" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IteratorTests" />
-      <option name="METHOD_NAME" value="moveOutsideOfBoundaries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="panzer.models.miscellaneous.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="panzer.models.miscellaneous" />
+      <option name="MAIN_CLASS_NAME" value="panzer.models.miscellaneous.VehicleAssemblerTest" />
+      <option name="METHOD_NAME" value="addShellPart" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IteratorTests.printNonExistentString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehicleAssemblerTest.getTotalPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTesting - Exercises" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IteratorTests" />
-      <option name="METHOD_NAME" value="printNonExistentString" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="panzer.models.miscellaneous.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="panzer.models.miscellaneous" />
+      <option name="MAIN_CLASS_NAME" value="panzer.models.miscellaneous.VehicleAssemblerTest" />
+      <option name="METHOD_NAME" value="getTotalPrice" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwitterTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehicleAssemblerTest.testArsenalPartsSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTesting - Exercises" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TwitterTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="panzer.models.miscellaneous.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="panzer.models.miscellaneous" />
+      <option name="MAIN_CLASS_NAME" value="panzer.models.miscellaneous.VehicleAssemblerTest" />
+      <option name="METHOD_NAME" value="testArsenalPartsSum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleAssemblerTest.testEndurancePartsSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTesting - Exercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="panzer.models.miscellaneous.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="panzer.models.miscellaneous" />
+      <option name="MAIN_CLASS_NAME" value="panzer.models.miscellaneous.VehicleAssemblerTest" />
+      <option name="METHOD_NAME" value="testEndurancePartsSum" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.IteratorTests.moveOutsideOfBoundaries" />
-      <item itemvalue="JUnit.IteratorTests.printNonExistentString" />
-      <item itemvalue="JUnit.IteratorTests" />
-      <item itemvalue="JUnit.TwitterTests" />
-      <item itemvalue="JUnit.BubbleTests.bubbleSort" />
+      <item itemvalue="JUnit.VehicleAssemblerTest.addArsenalPart" />
+      <item itemvalue="JUnit.VehicleAssemblerTest.addShellPart" />
+      <item itemvalue="JUnit.VehicleAssemblerTest.testEndurancePartsSum" />
+      <item itemvalue="JUnit.VehicleAssemblerTest.testArsenalPartsSum" />
+      <item itemvalue="JUnit.VehicleAssemblerTest.getTotalPrice" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BubbleTests.bubbleSort" />
-        <item itemvalue="JUnit.TwitterTests" />
-        <item itemvalue="JUnit.IteratorTests" />
-        <item itemvalue="JUnit.IteratorTests.printNonExistentString" />
-        <item itemvalue="JUnit.IteratorTests.moveOutsideOfBoundaries" />
+        <item itemvalue="JUnit.VehicleAssemblerTest.getTotalPrice" />
+        <item itemvalue="JUnit.VehicleAssemblerTest.testArsenalPartsSum" />
+        <item itemvalue="JUnit.VehicleAssemblerTest.testEndurancePartsSum" />
+        <item itemvalue="JUnit.VehicleAssemblerTest.addShellPart" />
+        <item itemvalue="JUnit.VehicleAssemblerTest.addArsenalPart" />
       </list>
     </recent_temporary>
   </component>
@@ -384,59 +485,57 @@
       <option name="presentableId" value="Default" />
       <updated>1533043311013</updated>
       <workItem from="1533043313968" duration="11042000" />
+      <workItem from="1533422017786" duration="608000" />
+      <workItem from="1533488911143" duration="4452000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DatabaseExtendedTests_findByUsernameErrors - 2018.07.31 at 18h 25m 38s.xml">
-      <configuration name="DatabaseExtendedTests.findByUsernameErrors" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_getTotalAttackModification - 2018.08.05 at 20h 26m 46s.xml">
+      <configuration name="VehicleAssemblerTest.getTotalAttackModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DatabaseExtendedTests_findByNullUsername - 2018.07.31 at 18h 26m 17s.xml">
-      <configuration name="DatabaseExtendedTests.findByNullUsername" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_getTotalAttackModification - 2018.08.05 at 20h 27m 47s.xml">
+      <configuration name="VehicleAssemblerTest.getTotalAttackModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DatabaseExtendedTests - 2018.07.31 at 18h 26m 55s.xml">
-      <configuration name="DatabaseExtendedTests" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_getTotalDefenseModification - 2018.08.05 at 20h 28m 20s.xml">
+      <configuration name="VehicleAssemblerTest.getTotalDefenseModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IteratorTests_moveOutsideOfBoundaries - 2018.07.31 at 18h 44m 44s.xml">
-      <configuration name="IteratorTests.moveOutsideOfBoundaries" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_getTotalDefenseModification - 2018.08.05 at 20h 28m 54s.xml">
+      <configuration name="VehicleAssemblerTest.getTotalDefenseModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IteratorTests_printNonExistentString - 2018.07.31 at 18h 45m 38s.xml">
-      <configuration name="IteratorTests.printNonExistentString" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_getTotalDefenseModification - 2018.08.05 at 20h 28m 57s.xml">
+      <configuration name="VehicleAssemblerTest.getTotalDefenseModification" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IteratorTests - 2018.07.31 at 18h 47m 18s.xml">
-      <configuration name="IteratorTests" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest - 2018.08.05 at 20h 29m 04s.xml">
+      <configuration name="VehicleAssemblerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TwitterTests - 2018.07.31 at 19h 49m 45s.xml">
-      <configuration name="TwitterTests" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_addArsenalPart - 2018.08.05 at 20h 37m 34s.xml">
+      <configuration name="VehicleAssemblerTest.addArsenalPart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BubbleTests_bubbleSort - 2018.07.31 at 20h 09m 03s.xml">
-      <configuration name="BubbleTests.bubbleSort" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_addShellPart - 2018.08.05 at 20h 38m 54s.xml">
+      <configuration name="VehicleAssemblerTest.addShellPart" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BubbleTests_bubbleSort - 2018.07.31 at 20h 09m 46s.xml">
-      <configuration name="BubbleTests.bubbleSort" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_testEndurancePartsSum - 2018.08.05 at 21h 31m 44s.xml">
+      <configuration name="VehicleAssemblerTest.testEndurancePartsSum" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BubbleTests_bubbleSort - 2018.07.31 at 20h 09m 51s.xml">
-      <configuration name="BubbleTests.bubbleSort" configurationId="JUnit" />
+    <history-entry file="VehicleAssemblerTest_testArsenalPartsSum - 2018.08.05 at 21h 32m 38s.xml">
+      <configuration name="VehicleAssemblerTest.testArsenalPartsSum" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11042000" />
+    <option name="totallyTimeSpent" value="16102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25611246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32922733" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" auto_hide="true" id="Run" order="2" weight="0.32922733" />
@@ -444,16 +543,21 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3294621" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32922733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3294621" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,28 +581,20 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/panzer/models/miscellaneous/VehicleAssemblerTest.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/database/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#98#99#0" expanded="true" />
-            <element signature="e#145#146#0" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -532,14 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="240" selection-start-line="240" selection-end-line="240" />
-          <folding>
-            <element signature="e#2111#2112#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#5951#6086#0" expanded="true" />
-            <element signature="e#6085#6086#0" expanded="true" />
-            <element signature="e#6484#6648#0" expanded="true" />
-            <element signature="e#6647#6648#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -578,25 +666,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/databaseTests/DatabaseExtendedTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iteratorTest/ListIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,9 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,9 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,14 +703,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/twitter/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
+        <state relative-caret-position="168">
           <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#108#109#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,41 +717,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/twitter/MicrowaveOven.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="273">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TwitterTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bubbleSort/Bubble.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="315">
           <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BubbleTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="504">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#151#152#0" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -706,6 +761,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panzer/core/PanzerBattleOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panzer/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/databaseTests/DatabaseExtendedTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panzer/models/miscellaneous/VehicleAssembler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1995#1996#0" expanded="true" />
+            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="e#2128#2129#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/panzer/models/miscellaneous/VehicleAssemblerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
