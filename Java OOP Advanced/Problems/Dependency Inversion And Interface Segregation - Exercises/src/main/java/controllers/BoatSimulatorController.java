@@ -191,10 +191,6 @@ public class BoatSimulatorController implements IBoatSimulatorController {
             }
         }
 
-        if (this.winners.size() >= 3) {
-            this.notFinished.clear();
-        }
-
         this.winners = this.winners.entrySet()
                 .stream()
                 .sorted(Comparator.comparingDouble(Map.Entry::getValue))
