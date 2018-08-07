@@ -14,7 +14,7 @@ public class EngineFactory implements IEngineFactory {
             case STERNDRIVE:
                 return new SterndriveEngine(model, horsepower, displacement);
             default:
-                throw new NoSuchMethodError();
+                return null;
         }
     }
 }

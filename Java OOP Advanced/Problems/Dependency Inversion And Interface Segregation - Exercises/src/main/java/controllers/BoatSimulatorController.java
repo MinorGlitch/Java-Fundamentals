@@ -15,14 +15,13 @@ import enumeration.EngineType;
 import exceptions.*;
 import models.races.Race;
 
-import javax.naming.OperationNotSupportedException;
 import java.util.*;
 import java.util.stream.Collectors;
 
 import static Utility.Constants.*;
 
 public class BoatSimulatorController implements IBoatSimulatorController {
-    private Map<IBoat, Double> winners;
+    private Map<IBoat, Double> finished;
     private Map<IBoat, Double> notFinished;
     private BoatSimulatorDatabase database;
     private IRace currentRace;
@@ -34,7 +33,7 @@ public class BoatSimulatorController implements IBoatSimulatorController {
         this.setCurrentRace(currentRace);
         this.engineFactory = engineFactory;
         this.boatFactory = boatFactory;
-        this.winners = new LinkedHashMap<>();
+        this.finished = new LinkedHashMap<>();
         this.notFinished = new LinkedHashMap<>();
     }
 
@@ -72,7 +71,6 @@ public class BoatSimulatorController implements IBoatSimulatorController {
     public String createBoat(List<String> parameters, BoatType boatType) throws NonExistantModelException, DuplicateModelException {
 
         IBoat boat = this.boatFactory.create(parameters, boatType);
-        Validator.ValidatePropertyValue(boat.getWeight(), "weight");
         this.database.getBoats().Add(boat);
 
         return String.format(Constants.CREATED_BOAT_MESSAGE, boatType.toString(), boat.getModel());
@@ -90,7 +88,6 @@ public class BoatSimulatorController implements IBoatSimulatorController {
     public String SignUpBoat(String model) throws NonExistantModelException, DuplicateModelException, NoSetRaceException {
         IBoat boat = this.database.getBoats().GetItem(model);
         this.ValidateRaceIsSet();
-        //TODO
 
         if (boat == null) {
             throw new NonExistantModelException(NON_EXISTENT_MODEL_MESSAGE);
@@ -112,34 +109,38 @@ public class BoatSimulatorController implements IBoatSimulatorController {
             throw new InsufficientContestantsException(Constants.INSUFFICIENT_CONTESTANTS_MESSAGE);
         }
 
-        this.chooseWinners(participants);
+        this.findFastest(participants);
 
         StringBuilder result = new StringBuilder();
-        int places = 0;
-        for (Map.Entry<IBoat, Double> winnersEntry : winners.entrySet()) {
-            if (places >= 3) {
-                break;
-            }
-            result.append(String.format("%s place: %s Model: %s Time: %s",
-                    Places.values()[places++],
-                    winnersEntry.getKey().getClass().getSimpleName(),
-                    winnersEntry.getKey().getModel(),
-                    isFinished(winnersEntry.getValue())))
-                    .append(System.lineSeparator());
-        }
+        final int[] places = {0};
+
+        this.finished.entrySet()
+                .stream()
+                .sorted(Comparator.comparingDouble(Map.Entry::getValue))
+                .forEach(boat -> {
+                    if (places[0] < 3) {
+                        result.append(String.format("%s place: %s Model: %s Time: %s",
+                                Places.values()[places[0]++],
+                                boat.getKey().getClass().getSimpleName(),
+                                boat.getKey().getModel(),
+                                isFinished(boat.getValue())))
+                                .append(System.lineSeparator());
+                    }
+                });
+
         for (Map.Entry<IBoat, Double> notFinishedEntry : notFinished.entrySet()) {
-            if (places >= 3) {
+            if (places[0] == 3) {
                 break;
             }
             result.append(String.format("%s place: %s Model: %s Time: Did not finish!",
-                    Places.values()[places++],
+                    Places.values()[places[0]++],
                     notFinishedEntry.getKey().getClass().getSimpleName(),
                     notFinishedEntry.getKey().getModel()))
                     .append(System.lineSeparator());
         }
 
         this.currentRace = null;
-        this.winners.clear();
+        this.finished.clear();
         this.notFinished.clear();
 
         return result.toString().trim();
@@ -154,47 +155,36 @@ public class BoatSimulatorController implements IBoatSimulatorController {
 
     @Override
     public String GetStatistic() {
-        Map<String, List<IBoat>> grouped = new LinkedHashMap<>();
-        int totalSize = this.currentRace.GetParticipants().size();
-
-        for (IBoat boat : this.currentRace.GetParticipants()) {
-            grouped.putIfAbsent(boat.getClass().getSimpleName(), new ArrayList<>());
-            grouped.get(boat.getClass().getSimpleName()).add(boat);
-        }
+        List<IBoat> participant = this.currentRace.GetParticipants();
 
         StringBuilder result = new StringBuilder();
 
-        grouped = grouped
+        participant.stream().collect(Collectors.groupingBy(boat -> boat.getClass().getSimpleName()))
                 .entrySet()
                 .stream()
                 .sorted(Comparator.comparing(Map.Entry::getKey))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> a, LinkedHashMap::new));
-
-        for (Map.Entry<String, List<IBoat>> groupedSet : grouped.entrySet()) {
-            double percent = ((double) groupedSet.getValue().size() / totalSize) * 100.0;
-
-            result.append(String.format("%s -> %.2f%%", groupedSet.getKey(), percent))
-            .append(System.lineSeparator());
-        }
+                .forEach(boat -> {
+                    String boatType = boat.getKey();
+                    double percentage = ((double) boat.getValue().size() / participant.size()) * 100;
+                    result.append(String.format("%s -> %.2f%%",
+                            boatType,
+                            percentage))
+                            .append(System.lineSeparator());
+                });
 
         return result.toString().trim();
     }
 
-    private void chooseWinners(List<IBoat> participants) {
+    private void findFastest(List<IBoat> participants) {
         for (IBoat participant : participants) {
             Double speed = participant.CalculateRaceSpeed(this.currentRace);
             Double time = this.currentRace.getDistance() / speed;
             if (time <= 0) {
                 notFinished.put(participant, time);
             } else {
-                winners.put(participant, time);
+                finished.put(participant, time);
             }
         }
-
-        this.winners = this.winners.entrySet()
-                .stream()
-                .sorted(Comparator.comparingDouble(Map.Entry::getValue))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> a, LinkedHashMap::new));
     }
 
     private void ValidateRaceIsSet() throws NoSetRaceException {

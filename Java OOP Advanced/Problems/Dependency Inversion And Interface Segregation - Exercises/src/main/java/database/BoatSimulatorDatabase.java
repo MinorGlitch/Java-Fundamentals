@@ -3,7 +3,6 @@ package database;
 import models.boats.IBoat;
 import models.engines.IEngine;
 import contracts.IRepository;
-import models.MotorBoat;
 
 public class BoatSimulatorDatabase {
     private IRepository<IBoat> boats;

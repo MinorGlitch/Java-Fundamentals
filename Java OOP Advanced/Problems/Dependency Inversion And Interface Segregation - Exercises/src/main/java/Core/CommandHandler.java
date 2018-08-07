@@ -52,13 +52,10 @@ public class CommandHandler implements ICommandHandler {
                 return this.getController().createBoat(parameters, BoatType.ROW);
             case "CreateSailBoat":
                 return this.getController().createBoat(parameters, BoatType.SAIL);
-
             case "CreatePowerBoat":
                 return this.getController().createBoat(parameters, BoatType.POWER);
-
             case "CreateYacht":
                 return this.getController().createBoat(parameters, BoatType.YACHT);
-
             case "OpenRace":
                 return this.getController().OpenRace(
                         Integer.parseInt(parameters.get(0)),

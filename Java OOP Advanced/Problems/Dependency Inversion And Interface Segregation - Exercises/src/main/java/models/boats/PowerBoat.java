@@ -29,13 +29,13 @@ public class PowerBoat extends BaseBoat implements IPowerBoat {
     }
 
     @Override
-    public Double CalculateRaceSpeed(IRace currentRace) {
-        double res = 0.0D;
+    public double CalculateRaceSpeed(IRace currentRace) {
+        double res = 0D;
 
-        for (IEngine engine : this.engines) {
-            res += engine.getOutput();
+        for (int i = 0; i < 2; i++) {
+            res += this.engines.get(i).getOutput();
         }
 
-        return res - super.getWeight() + (currentRace.getOceanCurrentSpeed() / 5.0);
+        return res - super.getWeight() + (currentRace.getOceanCurrentSpeed() / 5D);
     }
 }

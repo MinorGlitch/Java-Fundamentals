@@ -24,8 +24,8 @@ public class SailBoat extends BaseBoat implements ISailBoat {
     }
 
     @Override
-    public Double CalculateRaceSpeed(IRace currentRace) {
-        return (currentRace.getWindSpeed() * (this.sailEfficiency / 100.0)) -
-                super.getWeight() + (currentRace.getOceanCurrentSpeed() / 2.0);
+    public double CalculateRaceSpeed(IRace currentRace) {
+        return (currentRace.getWindSpeed() * (this.sailEfficiency / 100D)) -
+                super.getWeight() + (currentRace.getOceanCurrentSpeed() / 2D);
     }
 }

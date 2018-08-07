@@ -34,9 +34,9 @@ public class Yacht extends BaseBoat implements IYacht {
     }
 
     @Override
-    public Double CalculateRaceSpeed(IRace currentRace) {
-        return this.engine.getOutput() - (super.getWeight() + this.cargoWeight) +
-                (currentRace.getOceanCurrentSpeed() / 2.0);
+    public double CalculateRaceSpeed(IRace currentRace) {
+        return this.engine.getOutput() - super.getWeight() - this.cargoWeight +
+                (currentRace.getOceanCurrentSpeed() / 2D);
     }
 
     @Override

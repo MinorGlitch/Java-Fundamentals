@@ -5,10 +5,7 @@ import Utility.Validator;
 import models.boats.IBoat;
 import exceptions.DuplicateModelException;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Race implements IRace {
     private int distance;
@@ -22,7 +19,7 @@ public class Race implements IRace {
         this.setWindSpeed(windSpeed);
         this.setOceanCurrentSpeed(oceanCurrentSpeed);
         this.setAllowsMotorBoats(allowsMotorBoats);
-        this.registeredBoats = new HashMap<>();
+        this.registeredBoats = new LinkedHashMap<>();
     }
 
     @Override

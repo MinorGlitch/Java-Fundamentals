@@ -22,7 +22,7 @@ public class RowBoat extends BaseBoat implements IRowBoat {
     }
 
     @Override
-    public Double CalculateRaceSpeed(IRace currentRace) {
-        return (this.oars * 100.0) - super.getWeight() + currentRace.getOceanCurrentSpeed();
+    public double CalculateRaceSpeed(IRace currentRace) {
+        return (this.oars * 100) - super.getWeight() + currentRace.getOceanCurrentSpeed();
     }
 }
